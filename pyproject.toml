@@ -1,5 +1,5 @@
 [project]
-name = "cap931-sales-agent"
+name = "sales-account-research-assistant"
 version = "0.1.0"
 description = "AI sales assistant that turns a prospect's public web pages into a sourced one-page account brief"
 readme = "README.md"
@@ -15,13 +15,6 @@ dependencies = [
     "requests>=2.34.2",
     "streamlit>=1.65.0",
 ]
-
-[project.scripts]
-cap931-sales-agent = "cap931_sales_agent:main"
-
-[build-system]
-requires = ["uv_build>=0.12.17,<0.13.0"]
-build-backend = "uv_build"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

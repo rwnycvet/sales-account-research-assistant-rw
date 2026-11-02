@@ -1,13 +1,13 @@
 # Sales Account Research Assistant
 
-**CAP 931 Capstone: Build a Sales Agent Prototype Using Multi-Agent GPT Models**
-Richard Watson Jr. · Per Scholas AI Prompt Engineering
+**AI account research for sales teams: from a prospect's website to a sourced one-page brief.**
+Built by Richard Watson Jr.
 
 A Streamlit app that helps a sales rep prepare for a first meeting. You give it a prospect's website, your product details and competitor URLs. It reads the prospect's public pages and produces a sourced **one-page account brief**: company strategy, leadership, competitor mentions, likely needs and talking points.
 
-- **Live demo:** https://cap931-sales-agent-rwjr.streamlit.app (the app sleeps when idle; the first load can take about 30 seconds)
-- **Final report:** [docs/Richard_Watson_Jr_CAP_931_KB_Report.pdf](docs/Richard_Watson_Jr_CAP_931_KB_Report.pdf)
-- **Presentation:** [docs/CAP931_Presentation.pdf](docs/CAP931_Presentation.pdf)
+- **Live demo:** https://sales-account-research-assistant-rw.streamlit.app (the app sleeps when idle; the first load can take about 30 seconds)
+- **Technical report:** [docs/coursework/technical_report.pdf](docs/coursework/technical_report.pdf)
+- **Presentation:** [docs/coursework/presentation.pdf](docs/coursework/presentation.pdf)
 - **Sample output:** [docs/sample_account_brief.md](docs/sample_account_brief.md)
 
 ---
@@ -59,8 +59,8 @@ Python: add sources list, header, date → downloadable one-pager (.md)
 Requirements: [uv](https://docs.astral.sh/uv/) (it installs the right Python version, 3.14, for you), and a free [Groq API key](https://console.groq.com/keys).
 
 ```bash
-git clone https://github.com/rwnycvet/cap931-sales-agent.git
-cd cap931-sales-agent
+git clone https://github.com/rwnycvet/sales-account-research-assistant.git
+cd sales-account-research-assistant
 uv sync
 ```
 
@@ -108,7 +108,7 @@ pyproject.toml      Project metadata (uv)
 notes.md            Development log with timestamps
 test_groq.py        Early API connection test
 test_fetch.py       Early page-fetching test
-docs/               Final report, presentation, sample output
+docs/               Sample output; coursework/ holds the technical report and presentation
 ```
 
 ## Results (standard test case)
@@ -141,6 +141,6 @@ Test case: selling **GreatShield EDR** to **Municipal Credit Union (MCU)**, with
 - User-entered URLs are fetched by the server, so `is_safe_url()` only allows http/https and blocks private, loopback, link-local and reserved IP addresses (SSRF protection); pages over 2 MB are refused
 - Web page text is passed to the model, so pages could contain prompt-injection attempts; the brief should always be reviewed
 
-## AI assistance
+## Background and AI assistance
 
-I built this project with guidance from Claude (Anthropic) as a tutor. AI help is described in the final report.
+This project started as the capstone for an AI prompt engineering program and was extended afterwards with automated tests, SSRF protection, competitor research, page discovery and a controlled experiment. I used Claude (Anthropic) as a tutor for explanations, debugging guidance and code patterns; I ran, tested and debugged every version of the app.
