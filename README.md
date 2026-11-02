@@ -59,8 +59,8 @@ Python: add sources list, header, date → downloadable one-pager (.md)
 Requirements: [uv](https://docs.astral.sh/uv/) (it installs the right Python version, 3.14, for you), and a free [Groq API key](https://console.groq.com/keys).
 
 ```bash
-git clone https://github.com/rwnycvet/sales-account-research-assistant.git
-cd sales-account-research-assistant
+git clone https://github.com/rwnycvet/sales-account-research-assistant-rw.git
+cd sales-account-research-assistant-rw
 uv sync
 ```
 
