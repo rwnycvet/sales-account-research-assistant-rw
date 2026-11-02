@@ -141,6 +141,6 @@ Test case: selling **GreatShield EDR** to **Municipal Credit Union (MCU)**, with
 - User-entered URLs are fetched by the server, so `is_safe_url()` only allows http/https and blocks private, loopback, link-local and reserved IP addresses (SSRF protection); pages over 2 MB are refused
 - Web page text is passed to the model, so pages could contain prompt-injection attempts; the brief should always be reviewed
 
-## Background and AI assistance
+## Background
 
-This project started as the capstone for an AI prompt engineering program and was extended afterwards with automated tests, SSRF protection, competitor research, page discovery and a controlled experiment. I used Claude (Anthropic) as a tutor for explanations, debugging guidance and code patterns; I ran, tested and debugged every version of the app.
+This project started as the capstone for an AI prompt engineering program and was extended afterwards with automated tests, SSRF protection, competitor research, page discovery and a controlled experiment.
